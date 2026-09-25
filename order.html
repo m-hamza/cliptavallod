@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سفارش آنلاین کلیپ تولد | ثبت سفارش کلیپ تبریک اختصاصی</title>
+<meta name="description" content="فرم سفارش آنلاین کلیپ تولد: انتخاب نوع سفارش، مناسبت، موزیک، تاریخ تحویل، کد تخفیف و پرداخت آنلاین یا کارت به کارت. پاسخگویی سریع در روبیکا.">
+<link rel="canonical" href="https://cliptavalod.ir/order.html">
+<meta property="og:title" content="سفارش آنلاین کلیپ تولد"><meta property="og:description" content="سفارش خود را در کمتر از ۲ دقیقه ثبت کنید — تحویل فوری ۲۴ ساعته">
+<meta property="og:image" content="https://cliptavalod.ir/img/cake.svg"><meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"OrderAction","target":"https://cliptavalod.ir/order.html","name":"سفارش آنلاین کلیپ تولد","potentialAction":{"@type":"CreateAction","objectType":"Product","result":"Order"}}</script>
+</head>
+<body>
+<div id="loader"><img src="img/cake.svg" alt="کیک تولد" width="110"><p>در حال آماده‌سازی…</p></div>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="img/cake.svg" alt="لوگوی کلیپ تولد" width="44" height="44"><span>کلیپ<span class="gold-text">تولد</span></span></a>
+    <nav class="nav-links"><a href="index.html">خانه</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="categories.html">دسته‌بندی‌ها</a><a href="blog/index.html">وبلاگ</a><a href="about.html">درباره ما</a><a href="contact.html">تماس</a></nav>
+    <a href="order.html" class="btn btn-primary btn-sm nav-cta active">🎂 سفارش آنلاین</a>
+    <button class="burger" aria-label="منو"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu"><a href="index.html">خانه</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="categories.html">دسته‌بندی‌ها</a><a href="order.html">سفارش آنلاین</a><a href="contact.html">تماس</a></nav>
+</header>
+
+<main class="container">
+<nav class="breadcrumb" aria-label="خرد نان"><a href="index.html">خانه</a> / <span>سفارش آنلاین</span></nav>
+<section class="section" style="padding-top:16px" id="order">
+  <h1 class="section-title">🎂 <span class="grad-text">سفارش آنلاین</span></h1>
+  <p class="section-sub">فرم زیر را پر کنید؛ کارشناس ما حداکثر تا ۳۰ دقیقه (ساعت کاری) برای تأیید و پیش‌فاکتور با شما تماس می‌گیرد.</p>
+
+  <form id="orderForm" class="form-card" novalidate enctype="multipart/form-data">
+    <input type="hidden" name="_csrf" value="session-token"><!-- ضد CSRF (سرور-side verify) -->
+    <div class="form-grid">
+      <div class="field"><label for="fname">نام و نام خانوادگی *</label><input id="fname" name="fullname" required placeholder="مثلاً: زهرا کریمی"><div class="err">نام خود را وارد کنید.</div></div>
+      <div class="field"><label for="phone">شماره تماس (موبایل ایران) *</label><input id="phone" name="phone" inputmode="numeric" required placeholder="09xxxxxxxxx" pattern="0?9\d{9}"><div class="err">شماره موبایل ایرانی معتبر وارد کنید (مثال ۰۹۱۲۱۲۳۴۵۶۷).</div></div>
+      <div class="field"><label for="rubika">آیدی روبیکا / اینستاگرام / تلگرام</label><input id="rubika" name="social" placeholder="@username"><div class="err"></div></div>
+      <div class="field"><label for="email">ایمیل (اختیاری)</label><input id="email" type="email" name="email" placeholder="you@example.com"><div class="err">ایمیل معتبر نیست.</div></div>
+      <div class="field"><label for="orderType">نوع سفارش *</label>
+        <select id="orderType" name="orderType" required>
+          <option value="">— انتخاب کنید —</option>
+          <optgroup label="کلیپ اختصاصی">
+            <option>کلیپ تولد رفیق</option><option>کلیپ تولد مادر</option><option>کلیپ تولد پدر</option>
+            <option>کلیپ تولد دختر</option><option>کلیپ تولد پسر</option><option>کلیپ تولد خواهر</option>
+            <option>کلیپ تولد برادر</option><option>کلیپ تولد همسر</option><option>کلیپ تولد عشقم</option>
+            <option>کلیپ سالگرد ازدواج</option><option>کلیپ مناسبت خاص</option>
+          </optgroup>
+          <optgroup label="طراحی تصویر">
+            <option>کارت تبریک دیجیتال</option><option>پوستر تولد</option><option>استوری اینستاگرام</option><option>بنر تبریک</option>
+          </optgroup>
+          <optgroup label="پکیج‌ها">
+            <option>پکیج طلایی</option><option>پکیج نقره‌ای</option><option>پکیج برنزی</option>
+          </optgroup>
+          <optgroup label="خدمات جانبی">
+            <option>ویرایش ویدیو</option><option>اضافه کردن موزیک</option><option>متن و اسم اختصاصی</option><option>افکت ویژه + تحویل فوری</option>
+          </optgroup>
+        </select><div class="err">نوع سفارش را انتخاب کنید.</div></div>
+      <div class="field"><label for="occasion">مناسبت *</label>
+        <select id="occasion" name="occasion" required>
+          <option value="">— انتخاب کنید —</option>
+          <option>تولد</option><option>سالگرد ازدواج</option><option>یلدا</option><option>نوروز</option><option>چهارشنبه‌سوری</option>
+          <option>عید فطر</option><option>عید قربان</option><option>ولنتاین</option><option>روز مادر</option><option>روز پدر</option><option>روز معلم</option><option>دیگر</option>
+        </select><div class="err">مناسبت را انتخاب کنید.</div></div>
+      <div class="field"><label for="targetName">نام شخص مورد نظر *</label><input id="targetName" name="targetName" required placeholder="اسمی که روی کلیپ درج شود"><div class="err">نام مخاطب الزامی است.</div></div>
+      <div class="field"><label for="age">سن (فقط برای تولد)</label><input id="age" name="age" type="number" min="1" max="120" placeholder="مثلاً ۲۵"><div class="err">سن باید بین ۱ تا ۱۲۰ باشد.</div></div>
+      <div class="field"><label for="music">انتخاب موزیک</label>
+        <select id="music" name="music"><option>پیشنهاد تیم ما</option><option>تقدیمی (بی‌کلام مجاز)</option><option>موزیک دلخواه (ارسال فایل)</option><option>بدون موزیک</option></select></div>
+      <div class="field"><label for="delivery">تاریخ تحویل مورد نظر *</label><input id="delivery" name="delivery" type="date" required><div class="err">تاریخ تحویل را مشخص کنید.</div></div>
+      <div class="field full"><label for="desc">توضیحات اضافی (ایده، تم، رنگ مورد علاقه…)</label><textarea id="desc" name="desc" rows="4" placeholder="هرچه بیشتر توضیح دهید، نتیجه بهتر می‌شود…"></textarea></div>
+      <div class="field"><label for="photos">آپلود عکس (اختیاری — JPG/PNG حداکثر ۱۰ مگابایت)</label><input id="photos" name="photos" type="file" accept="image/*" multiple></div>
+      <div class="field"><label>روش پرداخت *</label>
+        <select name="payment" required><option value="">— انتخاب کنید —</option><option>پرداخت آنلاین (زرین‌پال)</option><option>کارت به کارت</option></select><div class="err">روش پرداخت را انتخاب کنید.</div></div>
+      <div class="field"><label for="coupon">کد تخفیف</label>
+        <div style="display:flex;gap:10px"><input id="coupon" name="coupon" placeholder="BIRTHDAY20"><button type="button" id="applyCoupon" class="btn btn-gold btn-sm">اعمال</button></div>
+        <div id="couponResult" style="margin-top:8px;font-size:.88rem"></div></div>
+      <div class="field full" style="font-size:.85rem;color:var(--muted)">
+        <label style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" name="terms" required style="width:auto;margin-top:8px"> <span>قوانین و مقررات و <a href="privacy.html" style="color:var(--pink)">حریم خصوصی</a> را می‌پذیرم و تعهد می‌دهم محتوای ارسالی مغایر با قوانین جمهوری اسلامی ایران نباشد.</span></label>
+      </div>
+      <!-- reCAPTCHA: در محیط پروداکشن کلید سایت جایگزین شود -->
+      <div class="field full"><div class="g-recaptcha" data-sitekey="REPLACE_WITH_YOUR_SITE_KEY" style="transform:scale(.9);transform-origin:right"></div><small style="color:var(--muted)">احراز انسان بودن (reCAPTCHA v2)</small></div>
+    </div>
+    <button class="btn btn-primary" type="submit" style="width:100%;margin-top:10px">🚀 ثبت نهایی سفارش</button>
+    <p style="text-align:center;margin-top:14px;font-size:.85rem;color:var(--muted)">یا مستقیم در روبیکا سفارش دهید: <a href="https://rubika.ir/cliptavallod" target="_blank" rel="noopener" style="color:var(--gold)">@cliptavallod</a></p>
+  </form>
+
+  <section class="section">
+    <h2 class="section-title">🔎 پیگیری سفارش</h2>
+    <div class="form-card" style="max-width:560px;margin-inline:auto">
+      <div class="field"><label for="trackCode">کد رهگیری سفارش</label><input id="trackCode" placeholder="CT-XXXXXXX"></div>
+      <button id="trackBtn" class="btn btn-outline" type="button">پیگیری</button>
+      <div id="trackResult" class="card" style="margin-top:16px;display:none"></div>
+    </div>
+  </section>
+</section>
+<style>#trackResult.show{display:block!important}</style>
+</main>
+
+<footer class="footer"><div class="container footer-bottom">© ۱۴۰۵ کلیپ تولد | <a href="https://rubika.ir/cliptavallod" target="_blank" rel="noopener">کانال روبیکا</a> | <a href="terms.html">قوانین</a></div></footer>
+<button id="backTop" aria-label="بازگشت به بالا">↑</button>
+<button id="chatBtn" aria-label="چت آنلاین">💬</button>
+<div id="chatBox"><header>پشتیبانی آنلاین 🎂</header><div class="chat-body"></div><form class="chat-input"><input placeholder="پیام…" aria-label="پیام"><button type="submit">ارسال</button></form></div>
+<div id="toasts"></div>
+<script src="js/main.js" defer></script>
+</body>
+</html>
