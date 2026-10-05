@@ -13,15 +13,7 @@
 </head>
 <body>
 <div id="loader"><img src="img/cake.svg" alt="کیک تولد" width="110"><p>در حال آماده‌سازی…</p></div>
-<header class="navbar">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html"><img src="img/cake.svg" alt="لوگوی کلیپ تولد" width="44" height="44"><span>کلیپ<span class="gold-text">تولد</span></span></a>
-    <nav class="nav-links"><a href="index.html">خانه</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="categories.html">دسته‌بندی‌ها</a><a href="blog/index.html">وبلاگ</a><a href="about.html">درباره ما</a><a href="contact.html">تماس</a></nav>
-    <a href="order.html" class="btn btn-primary btn-sm nav-cta active">🎂 سفارش آنلاین</a>
-    <button class="burger" aria-label="منو"><span></span><span></span><span></span></button>
-  </div>
-  <nav class="mobile-menu"><a href="index.html">خانه</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="categories.html">دسته‌بندی‌ها</a><a href="order.html">سفارش آنلاین</a><a href="contact.html">تماس</a></nav>
-</header>
+<!-- HEADER: از فایل مشترک includes.js تزریق می‌شود -->
 
 <main class="container">
 <nav class="breadcrumb" aria-label="خرد نان"><a href="index.html">خانه</a> / <span>سفارش آنلاین</span></nav>
@@ -122,11 +114,11 @@
 </section>
 </main>
 
-<footer class="footer"><div class="container footer-bottom">© ۱۴۰۵ کلیپ تولد | <a href="https://rubika.ir/cliptavallod" target="_blank" rel="noopener">کانال روبیکا</a> | <a href="terms.html">قوانین</a></div></footer>
-<button id="backTop" aria-label="بازگشت به بالا">↑</button>
+<!-- FOOTER: از فایل مشترک includes.js تزریق می‌شود -->
 <button id="chatBtn" aria-label="چت آنلاین">💬</button>
 <div id="chatBox"><header>پشتیبانی آنلاین 🎂</header><div class="chat-body"></div><form class="chat-input"><input placeholder="پیام…" aria-label="پیام"><button type="submit">ارسال</button></form></div>
 <div id="toasts"></div>
+<script src="includes.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -266,3 +266,16 @@ ol.steps li::before{content:counter(st);position:absolute;inset-inline-start:14p
 
 /* ---------- لینک‌سازی مرتبط ---------- */
 .related a{margin-inline:6px}
+
+/* ---------- موبایل‌بار (نوار دسترسی سریع پایین صفحه) ---------- */
+.mobilebar{display:none}
+@media(max-width:767px){
+  .mobilebar{display:flex;position:fixed;bottom:0;right:0;left:0;z-index:1550;background:rgba(15,11,30,.92);backdrop-filter:blur(14px);border-top:1px solid var(--border)}
+  .mobilebar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 4px;font-size:.72rem;color:var(--muted);text-decoration:none}
+  .mobilebar a span{font-size:1.25rem;line-height:1}
+  .mobilebar a:hover,.mobilebar a:active{color:#fff}
+  body{padding-bottom:64px}
+  #backTop{bottom:78px}
+  #chatBtn{bottom:140px}
+  #chatBox{bottom:180px}
+}
