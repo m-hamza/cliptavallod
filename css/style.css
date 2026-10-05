@@ -239,3 +239,30 @@ tr:hover td{background:rgba(255,255,255,.04)}
 .prose ul{margin:0 22px 14px;list-style:disc}
 .prose ul li{color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- جدول تعرفه‌ها (pricing) ---------- */
+.pricing-table{width:100%;border-collapse:collapse;min-width:640px}
+.pricing-table th{background:var(--glass);padding:14px 12px;text-align:right;font-weight:800;border-bottom:2px solid var(--border)}
+.pricing-table td{padding:13px 12px;border-bottom:1px dashed var(--border);font-size:.92rem;color:var(--muted)}
+.pricing-table tr:hover td{background:rgba(236,72,153,.06)}
+.pricing-table .price-cell{color:var(--gold);font-weight:900;white-space:nowrap}
+
+/* ---------- پکیج محبوب (hot) ---------- */
+.plan.hot,.card.popular{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--shadow)}
+
+/* ---------- تایم‌لاین پیگیری سفارش ---------- */
+.timeline{position:relative;padding-inline-start:26px;display:grid;gap:18px}
+.timeline::before{content:"";position:absolute;inset-block:6px 6px;inset-inline-start:8px;width:3px;background:var(--grad);border-radius:3px}
+.timeline .step{position:relative;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 16px}
+.timeline .step::before{content:"";position:absolute;inset-inline-start:-24px;top:16px;width:14px;height:14px;border-radius:50%;background:#3f3f5e;border:3px solid var(--bg)}
+.timeline .step.done::before{background:var(--pink)}
+.timeline .step.active::before{background:var(--gold);animation:twinkle 1.6s infinite}
+.timeline .step small{color:var(--muted);display:block;font-size:.8rem}
+
+/* ---------- مراحل سفارش (ol.steps) ---------- */
+ol.steps{list-style:none;padding:0;counter-reset:st;max-width:820px;margin-inline:auto}
+ol.steps li{counter-increment:st;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 60px 16px 18px;margin-bottom:12px;position:relative}
+ol.steps li::before{content:counter(st);position:absolute;inset-inline-start:14px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:900}
+
+/* ---------- لینک‌سازی مرتبط ---------- */
+.related a{margin-inline:6px}

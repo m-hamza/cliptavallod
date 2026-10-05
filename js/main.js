@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("orders", JSON.stringify(orders));
       confetti(90);
       toast(`✅ سفارش شما با کد رهگیری ${data.id} ثبت شد. به‌زودی تماس می‌گیریم!`, "success", 7000);
+      setTimeout(() => { location.href = (/\/(category|landing-page|service|blog|party-supplies)\//.test(location.pathname) ? "../" : "") + "order-success.html?id=" + encodeURIComponent(data.id); }, 2600);
       form.reset();
       document.getElementById("trackResult")?.classList.remove("show");
     });
@@ -257,13 +258,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ---------- انتخاب پکیج → پر کردن فرم ---------- */
+  /* ---------- انتخاب پکیج → پر کردن فرم یا هدایت به صفحه سفارش ---------- */
   document.querySelectorAll("[data-plan]").forEach(btn => btn.addEventListener("click", () => {
     const sel = document.querySelector('select[name="orderType"]');
-    if (sel) { sel.value = btn.dataset.plan; sel.dispatchEvent(new Event("change")); }
-    toast(`پکیج «${btn.dataset.plan}» انتخاب شد 👌`, "success");
-    document.getElementById("order")?.scrollIntoView({ behavior: "smooth" });
+    if (sel) {
+      sel.value = btn.dataset.plan; sel.dispatchEvent(new Event("change"));
+      toast(`پکیج «${btn.dataset.plan}» انتخاب شد 👌`, "success");
+      document.getElementById("order")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // اگر در صفحهٔ سفارش نیستیم، با پارامتر plan به order.html برویم
+      const up = btn.closest(".navbar, main") && location.pathname.includes("/service/") ? "../" : "";
+      location.href = up + "order.html?plan=" + encodeURIComponent(btn.dataset.plan);
+    }
   }));
+
+  /* ---------- پیش‌انتخاب نوع سفارش از URL (?plan= / ?type=) ---------- */
+  (function prefillFromURL() {
+    const p = new URLSearchParams(location.search);
+    const sel = document.querySelector('select[name="orderType"]');
+    if (!sel) return;
+    const plan = p.get("plan"), type = p.get("type");
+    const wanted = plan || type;
+    if (!wanted) return;
+    const map = { "پکیج برنزی": "پکیج برنزی", bronze: "پکیج برنزی", "پکیج نقره‌ای": "پکیج نقره‌ای", silver: "پکیج نقره‌ای", "پکیج طلایی": "پکیج طلایی", gold: "پکیج طلایی", vip: "کلیپ VIP" };
+    const val = map[wanted];
+    for (const o of sel.options) { if (o.value === wanted || o.text.includes(wanted) || (val && o.text.includes(val))) { sel.value = o.value; break; } }
+    sel.dispatchEvent(new Event("change"));
+    toast("🎁 نوع سفارش از صفحهٔ قبلی پیش‌انتخاب شد", "info");
+  })();
 
   /* ---------- خبرنامه ---------- */
   document.querySelectorAll(".newsletter form").forEach(f => f.addEventListener("submit", e => {

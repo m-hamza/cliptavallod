@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /account.html
+Disallow: /order-success.html
+Sitemap: https://cliptavalod.ir/sitemap.xml
+Host: https://cliptavalod.ir
