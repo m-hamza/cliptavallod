@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیگیری سفارش | کلیپ تولد</title>
+<meta name="description" content="با وارد کردن کد رهگیری، وضعیت لحظه‌ای سفارش کلیپ تولد خود را ببینید.">
+<meta name="keywords" content="کلیپ تولد, کلیپ تبریک تولد, کلیپ تولد خاص, ری سفارش">
+<meta name="robots" content="index, follow">
+<meta name="author" content="کلیپ تولد">
+<link rel="canonical" href="https://cliptavalod.ir/track-order.html">
+<link rel="icon" type="image/svg+xml" href="img/cake.svg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="کلیپ تولد">
+<meta property="og:title" content="پیگیری سفارش | کلیپ تولد">
+<meta property="og:description" content="با وارد کردن کد رهگیری، وضعیت لحظه‌ای سفارش کلیپ تولد خود را ببینید.">
+<meta property="og:image" content="https://cliptavalod.ir/img/cake.svg">
+<meta property="og:url" content="https://cliptavalod.ir/track-order.html">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="پیگیری سفارش | کلیپ تولد">
+<meta name="twitter:description" content="با وارد کردن کد رهگیری، وضعیت لحظه‌ای سفارش کلیپ تولد خود را ببینید.">
+<meta name="twitter:image" content="https://cliptavalod.ir/img/cake.svg">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<link rel="preload" as="style" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "🔎 پیگیری سفارش",
+ "description": "با وارد کردن کد رهگیری، وضعیت لحظه‌ای سفارش کلیپ تولد خود را ببینید.",
+ "url": "https://cliptavalod.ir/track-order.html",
+ "image": "https://cliptavalod.ir/img/cake.svg",
+ "inLanguage": "fa-IR",
+ "brand": {
+  "@type": "Organization",
+  "name": "کلیپ تولد",
+  "url": "https://cliptavalod.ir/",
+  "sameAs": [
+   "https://rubika.ir/cliptavallod"
+  ]
+ },
+ "offers": {
+  "@type": "Offer",
+  "priceCurrency": "IRT",
+  "availability": "https://schema.org/InStock"
+ }
+}</script>
+</head>
+<body>
+<div id="loader"><img src="img/cake.svg" width="110" alt="کیک تولد با شمع"><p>در حال آماده‌سازی جشن… 🎂</p></div>
+<!-- HEADER: از فایل مشترک includes.js تزریق می‌شود -->
+<main class="container">
+<nav class="breadcrumb" aria-label="مسیر صفحه"><a href="index.html">خانه</a> / <span>پیگیری سفارش</span></nav>
+<section class="section" style="padding-top:16px">
+  <h1 class="section-title">🔎 پیگیری سفارش</h1>
+  <p class="section-sub">کد رهگیری ۶ رقمی که هنگام ثبت سفارش دریافت کرده‌اید را وارد کنید.</p>
+  
+  <div class="form-card card reveal" style="max-width:560px;margin:0 auto">
+    <form id="trackForm" novalidate>
+      <label class="field"><span>کد رهگیری</span><input name="code" required placeholder="مثلاً CLIP-12345"></label>
+      <button class="btn btn-primary" type="submit">پیگیری</button>
+    </form>
+    <div id="trackResult" style="margin-top:18px;display:none">
+      <div class="timeline">
+        <div class="step done"><b>دریافت سفارش</b><small>۲ ساعت پیش</small></div>
+        <div class="step done"><b>پرداخت تأیید شد</b><small>۱ ساعت پیش</small></div>
+        <div class="step active"><b>در حال تولید</b><small>همین الان</small></div>
+        <div class="step"><b>تحویل</b><small>حدوداً ۲۴ ساعت دیگر</small></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('trackForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      const v=e.target.code.value.trim();
+      if(!v){window.toast&&toast('کد را وارد کنید','error');return;}
+      document.getElementById('trackResult').style.display='block';
+      window.toast&&toast('وضعیت سفارش بروزرسانی شد ✔','success');
+    });
+  </script>
+</section>
+</main>
+<!-- FOOTER: از فایل مشترک includes.js تزریق می‌شود -->
+<button id="chatBtn" aria-label="چت آنلاین">💬</button>
+<div id="chatBox"><header>پشتیبانی آنلاین کلیپ تولد 🎂</header><div class="chat-body"></div><form class="chat-input"><input placeholder="پیام خود را بنویسید…" aria-label="پیام"><button type="submit">ارسال</button></form></div>
+<div id="toasts"></div>
+<script src="includes.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
